@@ -1,0 +1,36 @@
+Phillip Vo
+Final Project: Blackjack Design
+
+Resources: Python Programming 3rd Edition by Micheal Dawson
+
+After reading about OOP a little from the internet from sites like stackoverflow, I came across this book at the library hoping to learn more.
+From the book I learned about OOP(object- oriented programming) and got the basis of my design.
+
+Chapter 8 
+Chapter 9
+
+
+The program is broken up into several classes.
+ 
+The first steps in making the blackjack game is to create and define a standard deck of playing cards. 
+This is implemented by creating the classes Card, Hand and Deck. In class Card, the ranks and suits of a card are stored in lists.
+There are 13 ranks and 4 suit, all possible combination between the two makes 52 cards.
+This is also where I define the point value of each card and define the dealer's face down card.
+Next, is the class Hand, which represents a hand of cards. Then, comes the class Deck, which derives part of its defintion from class Hand.
+In Deck, there are three funtions that populate, shuffle and deal a standard deck of playing cards.
+
+After making a deck of cards to play with, now I need to define the game's paramter.
+In class BJ_Hand(Hand), I create a property called total, which represents the total point value of a blackjack hand. 
+This class adds up the card values, determines whether to treat an Ace as 1 or as 11 and if the hand busted. Next, is the class BJ_Player,
+which represents a blackjack player. This class has methods for the player to hit and announces whether a player busts, loses, wins and pushes.
+The next class, represents the dealer and determines if the dealer has 17 or greater than he must stay, but if he has less than 17 he must hit. 
+Also, the class determines whether the dealer bust and that his first card is going to be flip.
+
+The last class BJ_Game, represents an actual game of blackjack. Here the class recieves a list of names and creates a player for each name. Then, creates a dealer and a deck.
+Afterward, the class adds cards to the deck and proceeds to shuffle. Next, I create a property that determines which players are still play and havent busted.
+Then comes a method to deal additional cards to either the player or the dealer and continues until they stop hitting or bust. Next method, is a game loop which deals two cards to the each player and the dealer. 
+The dealer's first card is flip to hide its value and all the all other hands are displayed. Then, each player is given a turn to gain addtional cards. If all players bust then the dealer's facedown card is revealed and wins.
+Otherwise, play continues and the dealer gets a chance to gain additional cards. The dealer must hit as long has his hand is less than 17. 
+After everyone has gone, the player's hands are then compare to the dealer's hand. if the player's total is less, then they lose. If the player's hand is greater, then they win and if they're equal the player pushes (ties).
+
+The main() functions gets all the player and invokes the play() method from class BJ_Game.
