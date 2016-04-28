@@ -1,0 +1,19 @@
+Phillip Vo
+
+Blackjack Classes Table
+
+Class		Base Class	Description
+
+BJ_Card		Card		A blackjack playing card. 
+				Define an attribute that represent the point value of a card
+
+BJ_Deck		Deck		A blackjack deck, collection of BJ_Card objects
+
+BJ_Hand		Hand		A blackjack hand. Define attribute to represent total points of a hand.
+				Define attribute that protrays the owner of hand
+
+BJ_Player	BJ_Hand		A blackjack player
+
+BJ_Dealer	BJ_Hand		A blackjack dealer
+
+BJ_Game		object		A blackjack Game.
